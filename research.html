@@ -1,0 +1,175 @@
+
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Saransh Agrawal - Current Research</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<div id="wrapper">
+			<header id="header" class="alt">
+				<span class="logo"><img src="images/profile_pic.png" alt="Saransh Agrawal" /></span>
+				<h1>Saransh Agrawal</h1>
+                <p>Machine Learning Research Engineer | MS Data Science @ TAMU</p>
+			</header>
+
+			<nav id="nav">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="projects.html#main">Projects</a></li>
+                    <li><a href="research.html#main" class="active">Current Research</a></li>
+					<!-- <li><a href="publications.html#main">Publications</a></li> -->
+				</ul>
+			</nav>
+
+			<div id="main">
+                <section id="research" class="main">
+                    <header class="major">
+                        <h2>Research Activities</h2>
+                        <p>Actively contributing to advancing Large Language Models and AI Systems at the <a href="https://flair.tamu.edu/" target="_blank" rel="noopener noreferrer">Frontier Language AI Research (FLAIR) Lab</a>, focusing on efficiency, safety, and multimodal capabilities.</p>
+                    </header>
+                
+                    <hr />
+                
+                    <h3>Ongoing Research Projects</h3>
+                
+                    <div class="research-project" style="margin-left: 1.5em;">
+                        <h4>Investigating Cache Merging Strategies for Efficient Multimodal LLMs</h4>
+                        <p style="margin-bottom: 0.5em;">
+                            Current multimodal Large Language Models (e.g., Vision-Language Models) face significant computational challenges when processing long context inputs, impacting inference speed and cost. This project focuses on developing and evaluating novel <strong>cache merging techniques</strong> specifically tailored for multimodal architectures.
+                        </p>
+                        <ul style="margin-top: 0; margin-bottom: 0.5em;">
+                            <li><strong>Problem Addressed:</strong> High latency and computational cost associated with long sequences in multimodal attention mechanisms.</li>
+                            <li><strong>Methodology:</strong> Exploring strategies like selective key-value (KV) caching, cross-modal attention optimization, and adaptive merging algorithms to reduce the size of the attention cache without significant performance degradation.</li>
+                            <li><strong>Goal:</strong> To significantly improve the inference efficiency (latency, memory footprint) of multimodal LLMs on tasks requiring long-context understanding, enabling broader applicability.</li>
+                            <li><strong>Status:</strong> Actively developing methodologies and setting up experimental benchmarks.</li>
+                        </ul>
+                        <p><em>Keywords: Multimodal LLMs, Vision-Language Models, Long Context, Inference Optimization, Efficiency, KV Cache, Attention Mechanisms.</em></p>
+                    </div>
+                
+                    <div class="research-project" style="margin-top: 2em; margin-left: 1.5em;"> <!-- Add some space between projects -->
+                        <h4>Advancing Targeted Unlearning in Large Language Models</h4>
+                        <p style="margin-bottom: 0.5em;">
+                            Building upon my work for SemEval-2025 Task 4, this research continues to explore robust and efficient methods for <strong>machine unlearning</strong> or selective knowledge removal in LLMs. The focus is on refining techniques for isolating and modifying specific information (e.g., sensitive data, outdated facts) while preserving the model's general capabilities and mitigating unintended consequences.
+                        </p>
+                        <ul style="margin-bottom: 0.5em;">
+                            <li><strong>Problem Addressed:</strong> Safely and precisely removing unwanted knowledge from pre-trained LLMs without costly retraining or significant degradation of useful abilities.</li>
+                            <li><strong>Methodology:</strong> Extending causal-informed optimization techniques, investigating the scalability of layer-specific interventions (like those applied to OLMo models), and evaluating impacts on model safety, fairness, and robustness beyond standard benchmarks like MMLU.</li>
+                            <li><strong>Goal:</strong> To develop practical and scalable unlearning algorithms that enhance LLM trustworthiness and maintainability for real-world deployment.</li>
+                            <li><strong>Status:</strong> Exploring extensions and further analysis based on SemEval findings.</li>
+                        </ul>
+                         <p><em>Keywords: Machine Unlearning, LLM Safety, Responsible AI, Privacy, Model Editing, Causal Inference, Constrained Optimization, Trustworthy NLP.</em></p>
+                    </div>
+                
+                    <hr />
+                
+                    <h3>Presentations & Academic Engagement</h3>
+                    <p>Sharing research findings and engaging with the academic community through presentations:</p>
+
+                    <!-- Added style for indentation -->
+                    <ul style="list-style-type: disc; margin-left: 1.5em;">
+                        <li>
+                            <strong>LLM Unlearning Mechanisms & SemEval Contribution</strong>
+                            <!-- Icon link added after the title -->
+                            <a href="https://drive.google.com/file/d/1cuUauqo1sdLTekFjUbOl_G8PQ_reIHDW/view?usp=sharing" target="_blank" rel="noopener noreferrer" title="View Slides (LLM Unlearning)">
+                                <span style="font-size: 1.2em;">📄</span>
+                            </a>
+                            <br>
+                            <em>Venue:</em> FLAIR Lab, TAMU<br>
+                            <em>Focus:</em> Provided a comprehensive overview of Machine Unlearning concepts, algorithms (including Causal Mediation and Knowledge Editing), and presented mechanistic insights derived from our SemEval-2025 research.
+                        </li>
+                        <li>
+                            <strong>Critique of DPO and Knowledge Editing for LLM Detoxification</strong>
+                            <a href="https://drive.google.com/file/d/1c5J9qzXwncwQNwNohha-yNyQVELldJUN/view?usp=sharing"  target="_blank" rel="noopener noreferrer" title="View Slides (Detoxification)">
+                                <span style="font-size: 1.2em;">📄</span>
+                            </a>
+                            <br>
+                            <em>Venue:</em> NLP Research Group, TAMU <br>
+                            <em>Focus:</em> Analyzed limitations of Direct Preference Optimization (DPO) for detoxification, highlighting how it may manipulate attention rather than remove toxicity, and presented Knowledge Editing as a potentially more robust alternative based on recent literature.
+                        </li>
+                        <li>
+                            <strong>Adversarial Example Generation via Syntactically Controlled Paraphrasing</strong>
+                            <a href="https://drive.google.com/file/d/1x4W9mdgavzRI2x_V-RYOL8ThpPUEqA00/view?usp=sharing"  target="_blank" rel="noopener noreferrer" title="View Slides (Adversarial Examples)">
+                                <span style="font-size: 1.2em;">📄</span>
+                            </a>
+                            <br>
+                            <em>Venue:</em> Trustworthy NLP Seminar, TAMU <br>
+                            <em>Focus:</em> Examined the Syntactically Controlled Paraphrase Network (SCPN) approach for generating fluent, semantically similar adversarial examples while controlling specific syntactic structures.
+                        </li>
+                        <li>
+                            <strong>Exploring the Visual Shortcomings of Multimodal LLMs ("Eyes Wide Shut?")</strong>
+                            <a href="https://drive.google.com/file/d/1p6sEykSso1hgqMgGukUIksU3ORDM_3XY/view?usp=sharing" target="_blank" rel="noopener noreferrer" title="View Slides (Multimodal Visual Shortcomings)">
+                                <span style="font-size: 1.2em;">📄</span>
+                            </a>
+                            <br>
+                            <em>Venue:</em> Trustworthy NLP Seminar, TAMU <br>
+                            <em>Focus:</em> Investigated systematic visual weaknesses in current Multimodal LLMs linked to CLIP limitations ("CLIP-blind pairs"), introduced the MMVP benchmark, and discussed the Mixture of Features (MoF) technique for improving visual grounding.
+                        </li>
+                        <li>
+                            <strong>Frugal Streaming Algorithms for Quantile Estimation</strong>
+                            <a href="https://docs.google.com/presentation/d/1PEEzi9pB3Ey1QJ1JbA9D0NHNqfDaIEic/edit?usp=sharing&ouid=112646134199690030225&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer" title="View Slides (Frugal Streaming)">
+                                <span style="font-size: 1.2em;">📄</span>
+                            </a>
+                            <br>
+                            <em>Venue:</em> Data Streaming and Algorithms Course, TAMU <br>
+                            <em>Focus:</em> Explained the Frugal 1U and Frugal 2U algorithms as memory-efficient methods for estimating quantiles within data stream processing constraints.
+                        </li>
+                    </ul>
+
+                    <hr />
+                
+                     <h3>Broader Research Interests</h3>
+                     <p>Beyond my active projects, I am keenly interested in the intersection of efficient AI systems, cross-modal reasoning capabilities in foundation models, and exploring their potential applications in complex scientific domains.</p>
+                
+                
+                </section>
+
+                <!-- Content -->
+                <section id="research" class="main">
+                    <header class="major">
+                        <h2>Current Research</h2>
+                    </header>
+
+                    <h3>Research Focus</h3>
+                    <p><strong>Natural Language Processing and LLMs: </strong>My research at the FLAIR Lab centers on enhancing the robustness and reliability of LLMs. I am actively involved in cutting-edge research exploring <strong>unlearning</strong> techniques, which aim to selectively remove or modify specific knowledge within LLMs. This critical area of research has profound implications for addressing concerns related to privacy, bias, and model adaptability.</p>
+
+                    <p><strong>Multimodal Models:</strong> I am deeply interested in developing multimodal AI systems that can seamlessly integrate and leverage information from diverse sources, such as text, images, and sensors. My research focuses on exploring how models can effectively fuse and align information across different modalities, enabling them to achieve a deeper understanding and perform more sophisticated reasoning tasks.</p>
+
+                    <p><strong>ML for Remote Sensing and Geospatial Analysis:</strong> I am also interested in exploring the application of machine learning techniques to geospatial data. My project on predicting cotton yields using satellite imagery demonstrates my ability to leverage machine learning for analyzing and interpreting geospatial information to address real-world challenges.</p>
+
+                    <hr />
+
+                    <h3>FLAIR Lab Activities</h3>
+                    <p>As a Research Assistant at the <a href="https://flair.tamu.edu/" target="_blank" rel="noopener noreferrer">Frontier Language AI Research (FLAIR) Lab</a>, my work contributes to developing safer, more private, and helpful large language models. We focus on incorporating human feedback and enhancing the reasoning capabilities of these models.</p>
+
+                </section>
+			</div>
+
+			<footer id="footer">
+				<section>
+					<h2>Contact</h2>
+					<dl class="alt">
+						<dt>Email</dt>
+						<dd><a href="mailto:saranshagarwal2020@gmail.com">saranshagarwal2020@gmail.com</a></dd>
+					</dl>
+					<ul class="icons">
+						<li><a href="https://www.linkedin.com/in/saransh-agrawal8899/" target="_blank" rel="noopener noreferrer" class="icon brands fa-linkedin alt"><span class="label">linkedin</span></a></li>
+						<li><a href="https://github.com/saranshagarwal202" target="_blank" rel="noopener noreferrer" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
+					</ul>
+				</section>
+				<p class="copyright">© 2025 Saransh Agrawal.</p>
+			</footer>
+		</div>
+
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+	</body>
+</html>

@@ -1,0 +1,279 @@
+
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Saransh Agrawal - Projects</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+        <style>
+            /* Optional: Add some basic styling for project items if not using inline styles */
+            .project-item {
+                margin-bottom: 2.5em; /* Space between projects */
+                padding-bottom: 1.5em; /* Space before the border */
+                border-bottom: 1px solid rgba(144, 144, 144, 0.25); /* Light separator line */
+            }
+            .project-item:last-child {
+                border-bottom: none; /* No border for the last item */
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+            .project-content {
+                display: flex;
+                align-items: flex-start; /* Align items to the top */
+                gap: 1.5em; /* Space between image and text */
+            }
+            .project-image {
+                flex: 0 0 150px; /* Fixed width for image container: doesn't grow, doesn't shrink, basis is 150px */
+                /* Or use a percentage: flex: 0 0 25%; max-width: 180px; */
+            }
+            .project-image img {
+                width: 100%;
+                height: auto; /* Maintain aspect ratio */
+                display: block; /* Remove extra space below image */
+                border-radius: 4px; /* Optional: slightly rounded corners */
+            }
+            .project-text {
+                flex: 1; /* Takes remaining space */
+            }
+            .project-text h4 {
+                margin-top: 0; /* Remove default top margin if needed */
+                 margin-bottom: 0.5em; /* Space below title */
+            }
+             .project-links img, .project-links span {
+                vertical-align: middle;
+                margin-left: 5px; /* Space before icon/emoji */
+                margin-right: 2px; /* Space after icon/emoji */
+            }
+            .project-links a {
+                margin-right: 10px; /* Space between links */
+                text-decoration: none;
+                display: inline-block; /* Ensure links stay on one line nicely */
+                line-height: 30px; /* Match icon height */
+            }
+
+            /* Responsive adjustments */
+             @media (max-width: 736px) { /* Matches template breakpoint */
+                .project-content {
+                    flex-direction: column; /* Stack image and text vertically on small screens */
+                    align-items: center; /* Center items when stacked */
+                    gap: 1em;
+                }
+                .project-image {
+                     flex-basis: auto; /* Reset basis */
+                     width: 80%; /* Control width when stacked */
+                     max-width: 250px; /* Limit max width */
+                     margin-bottom: 1em; /* Add space below image when stacked */
+                }
+                .project-text {
+                    width: 100%; /* Take full width when stacked */
+                }
+             }
+
+        </style>
+	</head>
+	<body class="is-preload">
+		<div id="wrapper">
+			<header id="header" class="alt header-subpage">
+				<span class="logo"><img src="images/profile_pic.png" alt="Saransh Agrawal" /></span>
+				<h1>Saransh Agrawal</h1>
+                <p>Machine Learning Research Engineer | MS Data Science @ TAMU</p>
+			</header>
+
+			<nav id="nav">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="projects.html#main" class="active">Projects</a></li>
+                    <li><a href="research.html#main">Current Research</a></li>
+					<!-- <li><a href="publications.html#main">Publications</a></li> -->
+				</ul>
+			</nav>
+
+			<div id="main">
+                <section id="projects" class="main">
+                    <header class="major">
+                        <h2>Projects</h2>
+                        <!-- <p>Selected works demonstrating expertise in Large Language Models, Machine Learning, Reinforcement Learning, and Software Engineering.</p> -->
+                    </header>
+                
+                    <!-- Project Item 1: Multi-Preference Alignment -->
+                    <div class="project-item">
+                        <h4><strong>Adaptive Helpfulness–Harmlessness Alignment via Preference Vectors</strong><i> - submitted to COLM '25</i></h4>
+                        <div class="project-content">
+                            <div class="project-image">
+                                <img src="images/preference_vector.png" alt="Preference Vectors Thumbnail">
+                            </div>
+                            <div class="project-text">
+                                <p>Developed a novel "Preference Vector" framework to address limitations in existing LLM alignment techniques (RLHF/DPO). Instead of a single optimization, this method trains separate models on individual preferences (e.g., helpfulness, harmlessness), extracts behavioral shifts as vectors using task arithmetic principles, and dynamically merges them at inference. This enables fine-grained, controllable preference balancing without full model retraining.</p>
+                                <ul>
+                                    <li><strong>Key Contributions:</strong> Designed and implemented the Preference Vector pipeline; trained Llama3 (8B, 3B) and Mistral-7B models using DPO; conducted robustness experiments using multiple seeds and vector analysis.</li>
+                                    <li><strong>Impact:</strong> Outperformed standard Safe-RLHF baselines, enabling smooth control over trade-offs and scalable multi-preference alignment with lower computational cost.</li>
+                                    <li><strong>Tech Stack:</strong> PyTorch, Transformers, DPO, DeepSpeed (Multi-Node/Multi-GPU), Task Arithmetic, LLM Alignment Techniques.</li>
+                                </ul>
+                                <div class="project-links">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <!-- Project Item 2: Unlearning Research (SemEval Task) -->
+                    <div class="project-item">
+                        <h4><strong>Selective Amnesia in LLMs via Knowledge Isolation</strong><i> - SemEval @ACL '25</i></h4>
+                        <div class="project-content">
+                            <div class="project-image">
+                                <!-- Replace 'images/unlearning.png' with your actual image path -->
+                                <img src="images/unlearning.png" alt="Unlearning Research Thumbnail">
+                            </div>
+                            <div class="project-text">
+                                <p>Developed a novel two-stage methodology for targeted unlearning in LLMs to address the challenge of removing sensitive information without degrading overall capabilities. Combined causal mediation analysis to identify knowledge localization (specifically MLP modules in layers 0-5 of OLMo) with layer-specific constrained optimization using a joint loss function.</p>
+                                 <ul>
+                                    <li><strong>Key Contributions:</strong> Conducted causal tracing experiments; designed the constrained optimization strategy and joint loss function; fine-tuned OLMo (1B, 7B) models.</li>
+                                    <li><strong>Impact:</strong> Achieved <strong>2nd place</strong> in the SemEval-2025 Task 4 (1B track) with a high aggregate score (0.973) and minimal impact on general knowledge (retaining 88% MMLU accuracy). Demonstrated effective unlearning while highlighting scalability considerations for larger models.</li>
+                                    <li><strong>Tech Stack:</strong> PyTorch, Transformers (OLMo), Causal Inference, Constrained Optimization, LLM Fine-tuning, Machine Unlearning.</li>
+                                </ul>
+                                <div class="project-links">
+                                     <a href="https://github.com/saranshagarwal202/Unlearning_sensitive_content_in_LLM" target="_blank" rel="noopener noreferrer" title="View on GitHub">
+                                        <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" style="width: 25px; height: 25px;">
+                                    </a>
+                                    <!-- <a href="[Link to SemEval Paper/Description]" target="_blank" rel="noopener noreferrer" title="Read Paper/Task Description">
+                                        <span style="font-size: 25px;">📄</span> -->
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Item 5: Satellite Crop Monitoring -->
+                    <div class="project-item">
+                        <h4><strong>Satellite-based Crop Monitoring System (SCMS)</strong></h4>
+                        <div class="project-content">
+                            <div class="project-image">
+                                <!-- Replace 'images/placeholder_scms.png' with your actual image path -->
+                                <img src="images/scms.png" alt="SCMS Project Thumbnail">
+                            </div>
+                            <div class="project-text">
+                                <p>Designed and developed a web-based platform for monitoring crop health and predicting yields using satellite imagery. Implemented a secure and scalable microservice architecture using Docker and FastAPI, with a central Job Runner orchestrating backend tasks (image fetching, processing, ML inference).</p>
+                                 <ul>
+                                    <li><strong>Key Contributions:</strong> Designed the overall System Architecture, database schemas (PostgreSQL/MongoDB), and REST APIs (FastAPI with OpenAPI documentation); Implemented microservices for data processing (QGIS) and ML model serving; Fine-tuned ViT & Satlas models for crop yield prediction.</li>
+                                    <li><strong>Impact:</strong> Created a functional platform enabling real-time monitoring, vegetation index analysis (NDVI/GCI), yield prediction, and multi-farm management. Presented at the <strong>Agronomy Society of America 2024</strong>.</li>
+                                    <li><strong>Tech Stack:</strong> Python, FastAPI, Docker, Microservices, PostgreSQL, MongoDB, QGIS, PyTorch/TensorFlow, Computer Vision (ViT, Satlas), Scikit-learn, REST APIs, System Design.</li>
+                                </ul>
+                                <div class="project-links">
+                                    <a href="https://github.com/saranshagarwal202/Satellite_based_crop_monitoring_system" target="_blank" rel="noopener noreferrer" title="View on GitHub">
+                                        <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" style="width: 25px; height: 25px;">
+                                    </a>
+                                    <a href="pdfs/Capstone_internal_final_report.pdf" target="_blank" rel="noopener noreferrer" title="Read PDF Report">
+                                        <span style="font-size: 25px;">📄</span>
+                                    </a>
+                                     <a href="pdfs/SCMS_poster.pdf" target="_blank" rel="noopener noreferrer" title="View Poster">
+                                        <span style="font-size: 25px;">📌</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <!-- Project Item 3: Efficient RLHF -->
+                    <div class="project-item">
+                        <h4><strong>Always-On-Policy Prompts for Efficient RLHF</strong></h4>
+                        <div class="project-content">
+                            <div class="project-image">
+                                <img src="images/aop.png" alt="Efficient RLHF Thumbnail">
+                            </div>
+                            <div class="project-text">
+                                <p>Addressed inefficiencies in standard RLHF pipelines caused by static prompts. Developed an "Always-On-Policy" (AOP) approach where training prompts are dynamically generated based on the model's intermediate performance during a PPO-based training process. This focuses human feedback/synthetic data generation on areas needing the most improvement.</p>
+                                 <ul>
+                                    <li><strong>Key Contributions:</strong> Designed the dynamic prompt generation system; implemented and evaluated AOP against standard RLHF and Starts-On-Policy (SOP) baselines using equivalent compute budgets.</li>
+                                    <li><strong>Impact:</strong> AOP significantly outperformed baseline models, demonstrating faster and more targeted LLM alignment, particularly for complex mathematical reasoning tasks using Gemma 2 and Llama 3.3 models.</li>
+                                    <li><strong>Tech Stack:</strong> PyTorch, Transformers, RLHF, PPO, Prompt Engineering, LLM Fine-tuning & Evaluation.</li>
+                                </ul>
+                                <div class="project-links">
+                                    <a href="[Link to GitHub Repo if available]" target="_blank" rel="noopener noreferrer" title="View on GitHub">
+                                        <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" style="width: 25px; height: 25px;">
+                                    </a>
+                                    <a href="[Link to Paper/Preprint if available]" target="_blank" rel="noopener noreferrer" title="Read Paper">
+                                        <span style="font-size: 25px;">📄</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <!-- Project Item 4: 20 Questions Game -->
+                    <div class="project-item">
+                        <h4><strong>LLM Plays 20 Questions via Reinforcement Learning</strong></h4>
+                        <div class="project-content">
+                            <div class="project-image">
+                                <!-- Replace 'images/placeholder_20q.png' with your actual image path -->
+                                <img src="images/llm_20_qs.png" alt="20 Questions Game Thumbnail">
+                            </div>
+                            <div class="project-text">
+                                <p>Trained a Llama 3 8B model to play the 20 Questions game using Reinforcement Learning. Developed a custom game environment and utilized Proximal Policy Optimization (PPO) with Low-Rank Adaptation (LoRA) for efficient fine-tuning. The agent learned to ask strategic yes/no questions and make guesses about places, landmarks, or countries.</p>
+                                 <ul>
+                                    <li><strong>Key Contributions:</strong> Built the custom RL environment; implemented the PPO training loop with LoRA; designed the reward function to encourage efficient questioning and accurate guessing; generated initial instruction dataset using Gemma 2 / Llama 3.1.</li>
+                                    <li><strong>Impact:</strong> Successfully trained an LLM agent capable of playing 20 Questions at an expert level through RL.</li>
+                                    <li><strong>Tech Stack:</strong> PyTorch, Transformers (Llama 3), RL (PPO), LoRA, OpenAI Gym-like Custom Environment, Reward Shaping.</li>
+                                </ul>
+                                <div class="project-links">
+                                    <a href="https://github.com/saranshagarwal202/LLM_plays_20_question_game" target="_blank" rel="noopener noreferrer" title="View on GitHub">
+                                        <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" style="width: 25px; height: 25px;">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <!-- Project Item 6: Reward Extrapolation -->
+                    <div class="project-item">
+                        <h4><strong>Reward Extrapolation from Trajectories using PPO and SAC</strong></h4>
+                        <div class="project-content">
+                            <div class="project-image">
+                                <!-- Replace with your actual image path -->
+                                <img src="images/hopper.gif" alt="Reward Extrapolation Thumbnail">
+                            </div>
+                            <div class="project-text">
+                                <p>Explored Inverse Reinforcement Learning by adapting the Trajectory Rank-Based Reward Extrapolation (T-REX) algorithm. Instead of the original PPO, Soft Actor-Critic (SAC) was used to learn a policy based on a reward function inferred purely from observing expert (PPO) trajectories in OpenAI Gym environments.</p>
+                                 <ul>
+                                    <li><strong>Key Contributions:</strong> Implemented the T-REX reward learning mechanism; trained SAC agents using the learned reward function; benchmarked performance against the original expert PPO policy.</li>
+                                    <li><strong>Impact:</strong> Demonstrated that the SAC agent trained on the extrapolated reward function could surpass the performance of the original PPO expert from whose trajectories the reward was learned.</li>
+                                    <li><strong>Tech Stack:</strong> Python, PyTorch/TensorFlow, OpenAI Gymnasium, Reinforcement Learning (PPO, SAC), Inverse Reinforcement Learning (T-REX).</li>
+                                </ul>
+                                <div class="project-links">
+                                     <!-- <a href="[Link to GitHub Repo if available]" target="_blank" rel="noopener noreferrer" title="View on GitHub">
+                                        <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" style="width: 25px; height: 25px;">
+                                    </a> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                </section>
+			</div>
+
+			<footer id="footer">
+				<section>
+					<h2>Contact</h2>
+					<dl class="alt">
+						<dt>Email</dt>
+						<dd><a href="mailto:saranshagarwal2020@gmail.com">saranshagarwal2020@gmail.com</a></dd>
+					</dl>
+					<ul class="icons">
+						<li><a href="https://www.linkedin.com/in/saransh-agrawal8899/" target="_blank" rel="noopener noreferrer" class="icon brands fa-linkedin alt"><span class="label">linkedin</span></a></li>
+						<li><a href="https://github.com/saranshagarwal202" target="_blank" rel="noopener noreferrer" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
+					</ul>
+				</section>
+				<p class="copyright">© 2025 Saransh Agrawal.</p>
+			</footer>
+		</div>
+
+		<!-- Scripts remain the same -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+	</body>
+</html>

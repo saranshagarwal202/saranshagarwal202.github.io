@@ -1,5 +1,6 @@
 @import url(fontawesome-all.min.css);
-@import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400';
+/* @import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400'; */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 /*
 	Stellar by HTML5 UP
@@ -125,7 +126,7 @@ input, select, textarea {
 	}
 
 	body, input, select, textarea {
-		font-family: "Source Sans Pro", Helvetica, sans-serif;
+		font-family: serif;
 		font-size: 17pt;
 		font-weight: 300;
 		line-height: 1.65;
@@ -170,7 +171,7 @@ input, select, textarea {
 		}
 
 	strong, b {
-		font-weight: 400;
+		font-weight: 900;
 	}
 
 	em, i {
@@ -194,7 +195,7 @@ input, select, textarea {
 		}
 
 	h1, h2, h3, h4, h5, h6 {
-		font-weight: 300;
+		font-weight: 700;
 		line-height: 1.5;
 		margin: 0 0 0.7em 0;
 		letter-spacing: -0.025em;
@@ -1798,7 +1799,7 @@ input, select, textarea {
 						}
 
 		}
-
+		
 /* Box */
 
 	.box {
@@ -3348,7 +3349,7 @@ input, select, textarea {
 		}
 
 		#main strong, #main b {
-			color: #636363;
+			color: inherit;
 		}
 
 		#main h1, #main h2, #main h3, #main h4, #main h5, #main h6 {
