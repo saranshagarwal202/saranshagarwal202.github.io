@@ -1,0 +1,74 @@
+@import "../../_globalColor";
+
+.dev-icons {
+  padding-left: 0;
+  list-style: none;
+  font-size: 3rem;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  text-align: center;
+}
+
+.software-skill-inline {
+  display: inline-block;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+/* Support for custom logo images */
+.software-skill-inline > .skill-image {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+}
+
+.software-skill-inline > .skill-image:hover {
+  transform: scale(1.1);
+}
+
+/* Brand colors for technology icons */
+.software-skill-inline > i {
+  /* Default fallback color */
+  color: $subTitle;
+  transition: transform 0.2s ease;
+
+  /* Languages */
+  &.fa-python { color: #3776AB; }
+  &.fa-rust { color: #DEA584; }
+  &.fa-terminal { color: #00ADD8; } /* Go - using terminal icon */
+  &.fa-js { color: #F7DF1E; }
+
+  /* ML/AI - using warm colors */
+  &.fa-fire { color: #EE4C2C; } /* PyTorch orange-red */
+  &.fa-brain { color: #FF6F00; } /* TensorFlow orange */
+  &.fa-robot { color: #FFD21E; } /* HuggingFace yellow */
+
+  /* Infrastructure */
+  &.fa-docker { color: #2496ED; }
+  &.fa-dharmachakra { color: #326CE5; } /* Kubernetes blue */
+  &.fa-aws { color: #FF9900; }
+  &.fa-stream { color: #231F20; } /* Kafka */
+
+  /* Data & Tools */
+  &.fa-database { color: #336791; } /* PostgreSQL blue */
+  &.fa-server { color: #336791; }
+  &.fa-leaf { color: #47A248; } /* MongoDB green */
+  &.fa-git-alt { color: #F05032; }
+  &.fa-linux { color: #FCC624; }
+
+  /* Generic */
+  &.fa-code { color: #00599C; } /* C++ blue */
+}
+
+.software-skill-inline > i:hover {
+  color: $skillsColor;
+  transform: scale(1.1);
+}
+.software-skill-inline > p {
+  color: $subTitle;
+  font-size: 10px;
+}
+.software-skill-inline > i:hover ~ p {
+  color: $skillsColor;
+}
