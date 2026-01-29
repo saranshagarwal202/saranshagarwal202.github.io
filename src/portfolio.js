@@ -335,7 +335,7 @@ const achievementSection = {
     {
       title: "Adaptive Helpfulness-Harmlessness Alignment with Preference Vectors",
       subtitle:
-        "arXiv 2025. Novel framework using task arithmetic for dynamic multi-preference balancing without retraining.",
+        "EACL 2026. Novel framework using task arithmetic for dynamic multi-preference balancing without retraining.",
       image: require("./assets/images/preferenceVector.png"),
       imageAlt: "Preference Vectors",
       footerLink: [
