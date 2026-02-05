@@ -205,24 +205,24 @@ const workExperiences = {
     {
       role: "Software Developer, ML Team",
       company: "Viewzen Labs",
-      companylogo: require("./assets/images/viewzenlabsLogo.jpeg"), // TODO: Add logo
+      companylogo: require("./assets/images/viewzenlabsLogo.jpeg"),
       date: "July 2021 – July 2023",
       desc: "Built distributed AutoML platform (MLaaS) serving enterprise clients.",
       descBullets: [
-        "Engineered microservices architecture with REST APIs and Kafka Streams, reducing ML development time by 80%",
-        "Optimized data pipelines with C++ and multi-threading, improving processing speed by 20%",
-        "Led predictive modeling for 45,000+ users across 300+ features; mentored 2 junior developers"
+        "Architected multi-tenant MLaaS platform with AutoML, experiment tracking, and Kafka-based inference pipelines for 50+ enterprise users.",
+        "Built fault-tolerant ETL microservice (FastAPI, Kafka) with decoupled E/T/L stages, concurrent pipeline handling, and C++ transformations for throughput optimization.",
+        "Developed AutoML feature enabling one-click baseline model generation (preprocessing, feature engineering, XGBoost) for rapid client onboarding."
       ]
     },
     {
       role: "Machine Learning Engineer Intern",
       company: "Centre for Digital Financial Inclusion",
-      companylogo: require("./assets/images/cdfiLogo.jpeg"), // TODO: Add logo
+      companylogo: require("./assets/images/cdfiLogo.jpeg"),
       date: "February 2021 – June 2021",
       desc: "Developed speech recognition system for Indian accents using deep learning.",
       descBullets: [
         "Achieved 0.10 CER and 0.17 WER using DeepSpeech transfer learning with KenLM language model",
-        "Built T5-based natural language to SQL query generator for voice-enabled financial services"
+        "Built T5-based natural language to SQL query generator for voice-enabled dashboards."
       ]
     }
   ]
